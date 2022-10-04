@@ -33,3 +33,19 @@ colorOne.style.backgroundColor = 'black';
 colorTwo.style.backgroundColor = 'blue';
 colorThree.style.backgroundColor = 'green';
 colorFour.style.backgroundColor = 'red';
+
+let elementSectionButton = document.createElement('section');
+elementMain.appendChild(elementSectionButton);
+
+let elementButton = document.createElement('button');
+elementButton.id = 'button-random-color';
+elementSectionButton.appendChild(elementButton);
+elementButton.style.height = '60px';
+elementButton.style.width = '100px';
+elementButton.style.borderRadius = '10%'
+elementButton.innerText = 'Cores aleatórias';
+
+elementButton.addEventListener('click', function (){
+    
+})
+
