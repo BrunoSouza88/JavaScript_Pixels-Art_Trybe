@@ -11,17 +11,17 @@ elementSection.id = 'color-palette';
 elementSection.style.display = 'flex';
 elementMain.appendChild(elementSection);
 
-for (let index = 0; index < 4; index += 1) {
-    let colorOptions = document.createElement('div');
+for (let index = 0; index < 4; index +=1){
+let colorOptions = document.createElement('div');
 
-    colorOptions.style.height = '80px';
-    colorOptions.style.width = '80px';
-    colorOptions.style.border = '1px solid black';
-    colorOptions.style.borderRadius = '75%';
-    colorOptions.style.margin = '10px';
-    colorOptions.className = 'color';
-    colorOptions.id = 'color-palette';
-    elementSection.appendChild(colorOptions);
+colorOptions.style.height = '80px';
+colorOptions.style.width = '80px';
+colorOptions.style.border = '1px solid black';
+colorOptions.style.borderRadius = '75%';
+colorOptions.style.margin = '10px';
+colorOptions.className = 'color';
+colorOptions.id = 'color-palette';
+elementSection.appendChild(colorOptions);
 };
 
 let color1 = document.getElementsByClassName('color')[0];
@@ -29,13 +29,14 @@ let color2 = document.getElementsByClassName('color')[1];
 let color3 = document.getElementsByClassName('color')[2];
 let color4 = document.getElementsByClassName('color')[3];
 
-function randomColor() {
+function randomColor (){
     let r = Math.random() * 256;
     let g = Math.random() * 256;
     let b = Math.random() * 256;
 
     return `rgb(${r}, ${g}, ${b})`;
 };
+
 
 color1.style.backgroundColor = 'black';
 color2.style.backgroundColor = randomColor();
@@ -53,6 +54,31 @@ elementButton.style.width = '100px';
 elementButton.style.borderRadius = '10%'
 elementButton.innerText = 'Cores aleatórias';
 
-elementButton.addEventListener('click', function () {
+elementButton.addEventListener ('click', function(){
     document.location.reload();
 });
+
+function creatTable (){
+    let elementSectionTable = document.createElement('table');
+    elementSectionTable.id = 'pixel-board';
+    elementMain.appendChild(elementSectionTable);
+
+    for (let index = 0; index < 5; index +=1){
+    let tableTr = document.createElement('tr');
+    tableTr.style.height = '40px';
+    tableTr.style.width = '40px';
+    tableTr.style.border = '1px solid black';
+    tableTr.classList = 'pixel';
+    elementSectionTable.appendChild(tableTr);
+        for (let index = 0; index < 5; index +=1){
+            let tableTd = document.createElement('td');
+            tableTd.style.width = '40px';
+            tableTd.style.height = '40px';
+            tableTd.style.border = '1px solid black'
+            tableTd.classList = 'pixel';
+            elementSectionTable.appendChild(tableTd);
+
+        }
+}
+}
+creatTable()
