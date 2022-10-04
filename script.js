@@ -24,15 +24,24 @@ colorOptions.id = 'color-palette';
 elementSection.appendChild(colorOptions);
 }
 
-let colorOne = document.getElementsByClassName('color')[0];
-let colorTwo = document.getElementsByClassName('color')[1];
-let colorThree = document.getElementsByClassName('color')[2];
-let colorFour = document.getElementsByClassName('color')[3];
+let color1 = document.getElementsByClassName('color')[0];
+let color2 = document.getElementsByClassName('color')[1];
+let color3 = document.getElementsByClassName('color')[2];
+let color4 = document.getElementsByClassName('color')[3];
 
-colorOne.style.backgroundColor = 'black';
-colorTwo.style.backgroundColor = 'blue';
-colorThree.style.backgroundColor = 'green';
-colorFour.style.backgroundColor = 'red';
+function randomColor (){
+    let r = Math.random() * 256;
+    let g = Math.random() * 256;
+    let b = Math.random() * 256;
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
+color1.style.backgroundColor = 'black';
+color2.style.backgroundColor = randomColor();
+color3.style.backgroundColor = randomColor();
+color4.style.backgroundColor = randomColor();
 
 let elementSectionButton = document.createElement('section');
 elementMain.appendChild(elementSectionButton);
@@ -45,7 +54,6 @@ elementButton.style.width = '100px';
 elementButton.style.borderRadius = '10%'
 elementButton.innerText = 'Cores aleatórias';
 
-elementButton.addEventListener('click', function (){
-    
-})
+
+
 
