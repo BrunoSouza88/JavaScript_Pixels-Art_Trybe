@@ -54,6 +54,8 @@ elementButton.style.width = '100px';
 elementButton.style.borderRadius = '10%'
 elementButton.innerText = 'Cores aleatórias';
 
-
+elementButton.addEventListener ('click', function(){
+    document.location.reload();
+})
 
 
