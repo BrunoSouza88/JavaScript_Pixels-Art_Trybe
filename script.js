@@ -17,7 +17,7 @@ function randomColor () {
 };
 
 
-function OtherColors () {
+function otherColors () {
     color2.style.backgroundColor = randomColor();
     color3.style.backgroundColor = randomColor();
     color4.style.backgroundColor = randomColor();
@@ -43,9 +43,25 @@ function creatTable() {
     }
 }
 
+function selectColor () {
+    let colorSelected = document.getElementsByClassName('color');
+    colorSelected.className = ' selected';
+}
+
+function addClassSelected(event) {
+    let elementSelcted = document.getElementsByClassName('selected')[0];
+    elementSelcted.classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+
+color1.addEventListener('click', addClassSelected);
+color2.addEventListener('click', addClassSelected);
+color3.addEventListener('click', addClassSelected);
+color4.addEventListener('click', addClassSelected);
 
 
 // Chamando funções                                                                     
 colorBlack();
-OtherColors();
-creatTable();                                                                                                                                                       
+otherColors();
+creatTable();
+selectColor();
