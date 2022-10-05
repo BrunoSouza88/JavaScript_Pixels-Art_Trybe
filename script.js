@@ -58,7 +58,6 @@ elementButton.addEventListener('click', function () {
     document.location.reload();
 });
 
-
 function creatTable() {
     let elementSectionTable = document.createElement('table');
     elementSectionTable.id = 'pixel-board';
@@ -87,4 +86,3 @@ function creatTable() {
     }
 }
 creatTable()
-
