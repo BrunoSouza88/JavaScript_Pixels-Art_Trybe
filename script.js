@@ -59,9 +59,26 @@ color2.addEventListener('click', addClassSelected);
 color3.addEventListener('click', addClassSelected);
 color4.addEventListener('click', addClassSelected);
 
+function holdColor () {
+    let setNewColor = document.querySelector('.selected').style.backgroundColor;
+    return setNewColor;
+}
+
+function coloring () {
+    let squarePixels = document.getElementsByClassName('pixel');
+    for (let index = 0; index < squarePixels.length; index +=1){
+        squarePixels[index].addEventListener('click', function (){
+            squarePixels[index].style.backgroundColor = holdColor();
+        })
+    }
+
+}
+
+
 
 // Chamando funções                                                                     
 colorBlack();
 otherColors();
 creatTable();
 selectColor();
+coloring();
