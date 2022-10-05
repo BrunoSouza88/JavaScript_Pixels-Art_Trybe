@@ -1,3 +1,10 @@
 * {
   margin: 2px;
 }
+
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    background-color: white;
+}
