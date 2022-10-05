@@ -61,7 +61,7 @@ elementButton.addEventListener('click', function () {
 function creatTable() {
     let elementSectionTable = document.createElement('table');
     elementSectionTable.id = 'pixel-board';
-    
+
     elementMain.appendChild(elementSectionTable);
 
     for (let index = 0; index <= 4; index += 1) {
@@ -70,19 +70,19 @@ function creatTable() {
         tableTr.style.width = '40px';
         tableTr.style.border = '10px solid black';
         tableTr.style.backgroundColor = 'white';
-        tableTr.className = 'pixel';
-        elementSectionTable.appendChild(tableTr);
         
+        elementSectionTable.appendChild(tableTr);
+
         for (let index = 0; index <= 4; index += 1) {
             let tableTd = document.createElement('td');
             tableTd.style.width = '40px';
             tableTd.style.height = '40px';
             tableTd.style.border = '1px solid black'
             tableTd.style.backgroundColor = 'white';
-            tableTd.className= 'pixel';
-            elementSectionTable.appendChild(tableTd);
+            tableTd.className = 'pixel';
+            tableTr.appendChild(tableTd);
 
-        }
+        } 
     }
 }
 creatTable()
