@@ -75,8 +75,12 @@ function coloring() {
 };
 
 function clearBoard() {
-    window.location.reload();
-}
+    let clearBoard = document.getElementsByClassName('pixel');
+    for (let index = 0; index < clearBoard.length; index += 1) {
+        clearBoard[index].style.backgroundColor = 'white'
+
+    };
+};
 
 
 // Chamando funções                                                                     
