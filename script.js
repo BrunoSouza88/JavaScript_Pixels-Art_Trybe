@@ -89,3 +89,5 @@ otherColors();
 creatTable();
 selectColor();
 coloring();
+
+// Oi Renan!
